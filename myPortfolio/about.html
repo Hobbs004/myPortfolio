@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Nhletelo Sheldom Nobyane</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            padding: 20px;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        /* Dark Mode */
+        .dark-mode {
+            background-color: #1e1e1e;
+            color: #ffffff;
+        }
+
+        /* Dark Mode Toggle Button */
+        #darkModeToggle {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            padding: 10px 15px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        #darkModeToggle:hover {
+            background-color: #0056b3;
+        }
+
+        /* Navigation */
+        nav ul {
+            list-style: none;
+            padding: 0;
+            background: #007BFF;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 10px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            padding: 10px 15px;
+            display: inline-block;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            background: #0056b3;
+            border-radius: 5px;
+        }
+
+        /* About Me Section */
+        .about-me {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #007BFF;
+            margin-bottom: 15px;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 20px;
+            padding: 10px;
+            background: #007BFF;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Dark Mode Toggle -->
+    <button id="darkModeToggle">🌙 Dark Mode</button>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- About Me Section -->
+    <section class="about-me">
+        <h1>About Me</h1>
+        <img src="Myself.jpg" alt="Nhletelo Sheldom Nobyane" class="profile-pic">
+        <p>Hi, I'm <strong>Nhletelo Sheldom Nobyane</strong>, a passionate software developer with a <strong>Diploma in IT</strong> from 
+            <strong>Vaal University of Technology</strong>, majoring in <strong>Software Development</strong>.</p>
+
+        <h2>My Skills</h2>
+        <ul>
+            <li>Programming Languages: Python, Java, PHP, Visual Basic</li>
+            <li>Web Development: HTML, CSS, JavaScript</li>
+            <li>Databases: MySQL, Firebase</li>
+            <li>Cloud Platforms: Microsoft Azure</li>
+        </ul>
+
+        <h2>My Interests</h2>
+        <p>I love coding, problem-solving, and building innovative solutions. I enjoy working on projects that help people, 
+            like <strong>Food AI</strong> (an AI-powered nutrition app) and <strong>Ubuhle Scents</strong> (an e-commerce platform for fragrances).</p>
+
+        <h2>Hobbies</h2>
+        <ul>
+            <li>Reading tech blogs & books</li>
+            <li>Playing chess</li>
+            <li>Exploring new programming languages</li>
+        </ul>
+
+        <h2>📜 Certifications</h2>
+        <ul>
+            <li>Microsoft DP-900 Azure Fundamentals</li>
+            <li>IT Essentials PC: Hardware and Software</li>
+            <li>CCNAv7: Introduction to Networks</li>
+            <li>CCNAv7: Switching, Routing, and Wireless Essentials</li>
+        </ul>
+    </section>
+
+    <script>
+        // Dark Mode Toggle
+        const darkModeToggle = document.getElementById("darkModeToggle");
+        darkModeToggle.addEventListener("click", () => {
+            document.body.classList.toggle("dark-mode");
+        });
+    </script>
+
+</body>
+</html>

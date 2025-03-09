@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Nhletelo's Portfolio</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            text-align: center;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        /* Dark Mode */
+        body.dark-mode {
+            background-color: #222;
+            color: white;
+        }
+
+        /* Navigation */
+        nav ul {
+            list-style: none;
+            padding: 0;
+            background: #007BFF;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 10px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            padding: 10px 15px;
+            display: inline-block;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            background: #0056b3;
+            border-radius: 5px;
+        }
+
+        /* Projects Section */
+        .projects {
+            padding: 80px 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .project {
+            background-color: rgba(21, 21, 163, 0.338);
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .project:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .project h2 {
+            color: #007bff;
+            font-size: 22px;
+        }
+
+        .project-link {
+            display: inline-block;
+            text-decoration: none;
+            font-size: 16px;
+            background-color: #007bff;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            margin-top: 10px;
+            transition: 0.3s;
+        }
+
+        .project-link:hover {
+            background-color: #0056b3;
+        }
+
+        /* Dark Mode Button */
+        #darkModeToggle {
+            position: fixed;
+            top: 10px;
+            right: 15px;
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        #darkModeToggle:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Dark Mode Toggle -->
+    <button id="darkModeToggle">🌙 Dark Mode</button>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Projects Section -->
+    <section class="projects">
+        <h1>My Projects</h1>
+
+        <!-- Weather App -->
+        <div class="project">
+            <h2>🌦️ Weather App</h2>
+            <p>A simple CLI/GUI application that fetches real-time weather data using an API like OpenWeather.</p>
+            <p><strong>Technologies Used:</strong> Python, OpenWeather API, Tkinter (GUI)</p>
+            <a href="https://github.com/Hobbs004/Python-Weather_App.git" target="_blank" class="project-link">View on GitHub</a>
+        </div>
+
+        <!-- Ubuhle Scents -->
+        <div class="project">
+            <h2>💐 Ubuhle Scents</h2>
+            <p>An e-commerce website that sells premium fragrances, offering a variety of scents and brands.</p>
+            <p><strong>Technologies Used:</strong> HTML, CSS, JavaScript, PHP, MySQL</p>
+            <a href="https://github.com/Hobbs004/Ubuhle_Scents_E-Commerce.git" target="_blank" class="project-link">View on GitHub</a>
+        </div>
+
+        <!-- Employee Management System -->
+        <div class="project">
+            <h2>👨‍💼 Employee Management System</h2>
+            <p>A web-based system that allows companies to manage employee data, leaves, and performance tracking.</p>
+            <p><strong>Technologies Used:</strong> Java, Spring Boot, MySQL, Hibernate</p>
+            <a href="https://github.com/Hobbs004/Employee_Database.git" target="_blank" class="project-link">View on GitHub</a>
+        </div>
+    </section>
+
+
+    <script>
+        // Dark Mode Toggle
+        const darkModeToggle = document.getElementById("darkModeToggle");
+        darkModeToggle.addEventListener("click", function() {
+            document.body.classList.toggle("dark-mode");
+            if (document.body.classList.contains("dark-mode")) {
+                darkModeToggle.textContent = "☀️ Light Mode";
+            } else {
+                darkModeToggle.textContent = "🌙 Dark Mode";
+            }
+        });
+    </script>
+
+</body>
+</html>

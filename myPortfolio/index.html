@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nhletelo's Portfolio</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            padding: 20px;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        /* Dark Mode */
+        .dark-mode {
+            background-color: #1e1e1e;
+            color: #ffffff;
+        }
+
+        /* Dark Mode Toggle Button */
+        #darkModeToggle {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            padding: 10px 15px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        #darkModeToggle:hover {
+            background-color: #0056b3;
+        }
+
+        /* Navigation Buttons */
+        .nav-buttons {
+            margin-top: 20px;
+        }
+
+        .nav-btn {
+            display: inline-block;
+            padding: 10px 15px;
+            margin: 5px;
+            border: none;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .nav-btn:hover {
+            background-color: #0056b3;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Dark Mode Toggle Button -->
+    <button id="darkModeToggle">🌙 Dark Mode</button>
+
+    <h2 id="greeting">Welcome to My Portfolio</h2>
+    
+    <p>
+        I am <b>Nhletelo Sheldom Nobyane</b>, a passionate software developer with a <b>Diploma in Information Technology</b> from 
+        <b>Vaal University of Technology</b>, majoring in <b>Software Development</b>.  
+        I have a strong background in <b>Python, Java, PHP, and Web Development</b>, with experience in building innovative applications.
+    </p>
+
+    <p>
+        I have worked on multiple projects, including <b>Food AI</b>, <b>Lucky Number Betting</b>, and others.  
+        Beyond coding, I enjoy <b>reading, playing chess, and continuous learning</b>.  
+        My goal is to use technology to develop <b>smart, user-friendly, and scalable solutions</b> that enhance everyday life.
+    </p>
+
+    <p>
+        Currently, I am an <b>Intern at Netcampus</b> for a 12-month program, where I’m enhancing my skills and experience as a <b>front-end developer</b>.
+    </p>
+
+    <!-- Navigation Buttons -->
+    <div class="nav-buttons">
+        <a href="about.html" class="nav-btn">About Me</a>
+        <a href="projects.html" class="nav-btn">Projects</a>
+        <a href="contact.html" class="nav-btn">Contact</a>
+    </div>
+
+    <script>
+        // Dark Mode Toggle
+        const darkModeToggle = document.getElementById("darkModeToggle");
+        darkModeToggle.addEventListener("click", () => {
+            document.body.classList.toggle("dark-mode");
+        });
+
+        // Dynamic Greeting Based on Time
+        function updateGreeting() {
+            const greetingElement = document.getElementById("greeting");
+            const hour = new Date().getHours();
+
+            if (hour < 12) {
+                greetingElement.textContent = "Good Morning, Welcome to My Portfolio!";
+            } else if (hour < 18) {
+                greetingElement.textContent = "Good Afternoon, Welcome to My Portfolio!";
+            } else {
+                greetingElement.textContent = "Good Evening, Welcome to My Portfolio!";
+            }
+        }
+        updateGreeting();
+    </script>
+
+</body>
+</html>

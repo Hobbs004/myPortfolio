@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Nhletelo Sheldom Nobyane</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            text-align: center;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        /* Dark Mode */
+        body.dark-mode {
+            background-color: #333;
+            color: #fff;
+        }
+
+        /* Navigation */
+        nav ul {
+            list-style: none;
+            padding: 0;
+            background: #007BFF;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 10px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            padding: 10px 15px;
+            display: inline-block;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            background: #0056b3;
+            border-radius: 5px;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            padding: 100px 20px;
+            max-width: 600px;
+            margin: auto;
+        }
+
+        h2 {
+            font-size: 22px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        /* Social Links */
+        .social-links {
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: inline-block;
+            text-decoration: none;
+            font-size: 18px;
+            background-color: #007bff;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            margin: 5px;
+            transition: 0.3s;
+        }
+
+        .social-links a:hover {
+            background-color: #0056b3;
+        }
+
+        /* Buttons */
+        .btn {
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px 5px;
+            transition: 0.3s;
+        }
+
+        #contactBtn {
+            background-color: #28a745;
+            color: white;
+        }
+
+        #contactBtn:hover {
+            background-color: #218838;
+        }
+
+         /* Dark Mode Toggle Button */
+         #darkModeToggle {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            padding: 10px 15px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        #darkModeToggle:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Dark Mode Toggle Button -->
+    <button id="darkModeToggle">🌙 Dark Mode</button>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="projects.html">Projects</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <h2>My Contact Information</h2>
+        <ul>
+            <li><strong>Email:</strong> nhletelonobyane.com</li>
+            <li><strong>Phone:</strong> +27 78 143 8766</li>
+            <li><strong>Location:</strong> Gauteng, South Africa</li>
+        </ul>
+
+        <button id="contactBtn" class="btn">Show Contact Alert</button>
+
+        <!-- Social Media Links -->
+        <h2>Connect with Me</h2>
+        <div class="social-links">
+            <a href="https://github.com/Hobbs004" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/nhletelo-nobyane" target="_blank">LinkedIn</a>
+        </div>
+    </section>
+
+    <script>
+        // Contact Button Alert
+        document.getElementById("contactBtn").addEventListener("click", function() {
+            alert("You can contact me via Email: nhletelonobyane.com or Phone: +27 78 143 8766");
+        });
+
+        // Dark Mode Toggle
+        const darkModeToggle = document.getElementById("darkModeToggle");
+        darkModeToggle.addEventListener("click", function() {
+            document.body.classList.toggle("dark-mode");
+
+            if (document.body.classList.contains("dark-mode")) {
+                darkModeToggle.textContent = "☀️ Light Mode";
+            } else {
+                darkModeToggle.textContent = "🌙 Dark Mode";
+            }
+        });
+    </script>
+
+</body>
+</html>
